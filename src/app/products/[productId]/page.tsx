@@ -1,4 +1,5 @@
 import { Metadata } from "next";
+import Link from "next/link";
 
 export const generrateMetadata = async ({
   params,
@@ -20,5 +21,10 @@ export default function ProductDetails({
 }: {
   params: { productId: string };
 }) {
-  return <h1>Hello {params.productId} </h1>;
+  return (
+    <>
+      <h1>Hello {params.productId} </h1>
+      <Link href="/products">Back</Link>
+    </>
+  );
 }
