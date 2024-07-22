@@ -13,9 +13,9 @@ function getRandomInt(count: number) {
 export default function ReviewDetails({ params }: { params: Params }) {
   const random = getRandomInt(2);
 
-  if (random === 1) {
-    throw new Error("Error on loading Review");
-  }
+//   if (random === 1) {
+//     throw new Error("Error on loading Review");
+//   }
   if (parseInt(params.reviewId) > 1000) {
     notFound();
   }
