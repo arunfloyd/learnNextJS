@@ -1,19 +1,19 @@
-import Notifications from "./@notifications/page";
-import ReveneMetrics from "./@revenue/page";
-import UserAnalytics from "./@users/page";
 
 export default function DashBoardLayout({
   children,
   users,
   revenue,
   notifications,
+  login,
 }: {
   children: React.ReactNode;
   users: React.ReactNode;
   revenue: React.ReactNode;
   notifications: React.ReactNode;
+  login: React.ReactNode;
 }) {
-  return (
+  const isLoggedIn = false;
+  return isLoggedIn ? (
     <>
       <div>{children}</div>
       <div style={{ display: "flex" }}>
@@ -24,5 +24,7 @@ export default function DashBoardLayout({
         <div style={{ display: "flex", flex: 1 }}>{notifications}</div>
       </div>
     </>
+  ) : (
+    login
   );
 }
