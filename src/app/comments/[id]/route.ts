@@ -1,3 +1,4 @@
+import { NextRequest } from "next/server";
 import { comments } from "../data";
 export async function GET(
   _request: Request,
@@ -8,6 +9,7 @@ export async function GET(
   );
   return Response.json(comment);
 }
+
 
 export async function PATCH(
   request: Request,
